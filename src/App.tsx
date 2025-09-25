@@ -369,7 +369,7 @@ function App() {
               <p className="text-gray-700 mb-4">
                 "Clean and simple journaling app. Love the habit tracker! Finally found something that doesn't feel overwhelming."
               </p>
-              <div className="text-sm text-gray-500">— Sarah M., Student</div>
+              <div className="text-sm text-gray-500">— Pavan Kumar., Student</div>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
@@ -381,7 +381,7 @@ function App() {
               <p className="text-gray-700 mb-4">
                 "Finally an app that keeps my data private. The Google Drive backup gives me peace of mind without compromising security."
               </p>
-              <div className="text-sm text-gray-500">— Alex R., Professional</div>
+              <div className="text-sm text-gray-500">— Random User From PlayStore</div>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
@@ -393,7 +393,7 @@ function App() {
               <p className="text-gray-700 mb-4">
                 "The mood tracking insights have been eye-opening. I can see patterns I never noticed before. Beautifully designed!"
               </p>
-              <div className="text-sm text-gray-500">— Maria L., Creative</div>
+              <div className="text-sm text-gray-500">— Nandan Gowda., Creative Head TecxZo</div>
             </div>
           </div>
         </div>
