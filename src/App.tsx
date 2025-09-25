@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Target, Heart, Shield, Download, Smartphone, CheckCircle, Star, Calendar, TrendingUp, Lock, Cloud } from 'lucide-react';
+import Logo from './assets/logo.png';
 
 function App() {
   return (
@@ -9,12 +10,20 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <BookOpen className="h-8 w-8 text-indigo-600" />
+              <img
+                      src={Logo}
+                      alt={'DayStories'}
+                      className="h-12 w-12 object-contain mx-auto"
+                    />
               <span className="text-2xl font-bold text-gray-900">DayStories</span>
             </div>
-            <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+           <a
+              href="https://play.google.com/store/apps/details?id=com.tecxzo.daystories"
+              download
+              className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-block"
+            >
               Download Now
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -32,10 +41,15 @@ function App() {
                 Your personal space to track moods, habits, and daily reflections — secure, simple, and powerful.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                href="https://play.google.com/store/apps/details?id=com.tecxzo.daystories"
+                download
+                >
                 <button className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
                   <Download className="h-5 w-5" />
                   <span>Download from Play Store</span>
                 </button>
+                </a>
                 <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-400 transition-colors">
                   Coming Soon on iOS
                 </button>
@@ -44,28 +58,53 @@ function App() {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl p-8 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform">
-                <div className="bg-white rounded-2xl p-6 space-y-4">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  </div>
-                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                  <div className="h-20 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center">
-                    <BookOpen className="h-8 w-8 text-indigo-600" />
-                  </div>
-                  <div className="flex space-x-2">
-                    <div className="h-6 w-6 bg-indigo-600 rounded-full flex items-center justify-center">
-                      <Heart className="h-3 w-3 text-white" />
+                <div className="max-w-md mx-auto bg-white rounded-3xl shadow-lg p-6 space-y-4">
+                    {/* App Icon + Name */}
+                    <div className="flex items-center space-x-4">
+                      <img 
+                        src= {Logo}
+                        alt="DayStories" 
+                        className="w-16 h-16 rounded-2xl shadow" 
+                      />
+                      <div>
+                        <h2 className="text-xl font-bold text-gray-800">DayStories</h2>
+                        <p className="text-sm text-gray-500">TecxZo</p>
+                        <p className="text-xs text-gray-400">Contains ads</p>
+                      </div>
                     </div>
-                    <div className="h-6 w-16 bg-gray-200 rounded"></div>
+
+                    {/* Downloads + Rating */}
+                    <div className="flex space-x-6 text-sm text-gray-600">
+                      <div>
+                        <p className="font-medium">100+</p>
+                        <p className="text-xs">Downloads</p>
+                      </div>
+                      <div>
+                        <p className="font-medium">3+</p>
+                        <p className="text-xs">Rated for</p>
+                      </div>
+                    </div>
+
+                    {/* Buttons */}
+                    <div className="flex space-x-3">
+                      <button className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition">
+                        Install
+                      </button>
+                      <button className="p-2 border rounded-lg hover:bg-gray-100 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          strokeWidth={2} 
+                          stroke="currentColor" 
+                          className="w-5 h-5 text-gray-600">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4 12v.01M12 4v.01M20 12v.01M12 20v.01M6.34 6.34l.01.01M17.66 6.34l.01.01M17.66 17.66l.01.01M6.34 17.66l.01.01" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    {/* Device availability */}
+                    <p className="text-xs text-gray-500 text-center">This app is available for your device</p>
                   </div>
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="h-8 bg-green-100 rounded"></div>
-                    <div className="h-8 bg-blue-100 rounded"></div>
-                    <div className="h-8 bg-purple-100 rounded"></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -371,10 +410,15 @@ function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+                href="https://play.google.com/store/apps/details?id=com.tecxzo.daystories"
+                download
+            >
             <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center space-x-2">
               <Smartphone className="h-5 w-5" />
               <span>Download from Play Store</span>
             </button>
+            </a>
             <button className="bg-indigo-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-400 transition-colors flex items-center space-x-2">
               <Smartphone className="h-5 w-5" />
               <span>Coming Soon on iOS</span>
@@ -391,7 +435,11 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <BookOpen className="h-8 w-8 text-indigo-400" />
+                 <img
+                      src={Logo}
+                      alt={'DayStories'}
+                      className="h-12 w-12 "
+                    />
                 <span className="text-2xl font-bold">DayStories</span>
               </div>
               <p className="text-gray-300 mb-4">Your moments, your story.</p>
